@@ -27,7 +27,7 @@ extern char *getenv();
 extern char *malloc();
 extern char *realloc();
 #endif /* __STDC__ */
-extern char *unctrl();
+extern const char *unctrl();
 #else
 #include <unctrl.h>
 #endif /* BSD */

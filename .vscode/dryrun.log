@@ -1,0 +1,11 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/kristofer/p/uae'
+cc -O -DBSD=1 -c command.c
+cc -O -DBSD=1 -c data.c
+cc -O -DBSD=1 -c display.c
+cc -O -DBSD=1 -c gap.c
+cc -O -DBSD=1 -c key.c
+cc -O -DBSD=1 -c main.c
+cc  -o ae command.o data.o display.o gap.o key.o main.o -lcurses -ltermcap
+make: Leaving directory '/home/kristofer/p/uae'
+ 

@@ -23,31 +23,31 @@ O       = .o
 OBJ     = command$(O) data$(O) display$(O) gap$(O) key$(O) main$(O)
 
 ae$(E) : $(OBJ)
-        $(LD) $(LDFLAGS) -o ae$(E) $(OBJ) $(LIBS)
+	$(LD) $(LDFLAGS) -o ae$(E) $(OBJ) $(LIBS)
 
 header.h : key.h
 
 command$(O): command.c header.h
-        $(CC) $(CFLAGS) -c command.c
+	$(CC) $(CFLAGS) -c command.c
 
 data$(O): data.c header.h
-        $(CC) $(CFLAGS) -c data.c
+	$(CC) $(CFLAGS) -c data.c
 
 display$(O): display.c header.h
-        $(CC) $(CFLAGS) -c display.c
+	$(CC) $(CFLAGS) -c display.c
 
 gap$(O): gap.c header.h
-        $(CC) $(CFLAGS) -c gap.c
+	$(CC) $(CFLAGS) -c gap.c
 
 key$(O): key.c header.h
-        $(CC) $(CFLAGS) -c key.c
+	$(CC) $(CFLAGS) -c key.c
 
 main$(O): main.c header.h
-        $(CC) $(CFLAGS) -c main.c
+	$(CC) $(CFLAGS) -c main.c
 
 clean:
-        -$(RM) $(OBJ) ae$(E)
+	-$(RM) $(OBJ) ae$(E)
 
 install:
-        -$(MV) ae$(E) $(HOME)/$(HOSTNAME)/bin
+	-$(MV) ae$(E) $(HOME)/$(HOSTNAME)/bin
 
